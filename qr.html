@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR-код для чата</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>QR-код для подключения к чату</h1>
+    <div id="qrcode"></div>
+    <p>Сканируйте этот QR-код с iPhone</p>
+    <p>Ссылка: http://10.209.213.82:5000</p>
+    
+    <script>
+        QRCode.toCanvas(document.getElementById('qrcode'), 
+            'http://10.209.213.82:5000', function(error) {
+            if (error) console.error(error);
+        });
+    </script>
+</body>
+</html>
